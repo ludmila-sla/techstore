@@ -6,7 +6,7 @@ start_link() ->
     gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
 
 init(_) ->
-    {ok, #{}}. % Estado inicial do serviço
+    {ok, #{}}.
 
 handle_call(_Request, _From, State) ->
     {reply, ok, State}.
